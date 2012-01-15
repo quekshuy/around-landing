@@ -19,7 +19,7 @@ TEMPLATE_DIRS = (
 )
 STATIC_ROOT = os.sep.join([PROJECT_DIR, '..', 'static'])
 STATICFILES_DIRS = (
-            os.sep.join([PROJECT_DIR, '..', 'static']),
+            os.sep.join([PROJECT_DIR, 'static']),
         )
 MEDIA_ROOT = os.sep.join([PROJECT_DIR, '..', 'uploads'])
 
