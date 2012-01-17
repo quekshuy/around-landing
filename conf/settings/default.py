@@ -1,10 +1,10 @@
 # Django settings for around_landing project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
+     ('Quek', 'quek@gozolabs.com'),
 )
 
 MANAGERS = ADMINS
@@ -27,13 +27,16 @@ DATABASES = {
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'Asia/Singapore'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-us'
 
 SITE_ID = 1
+
+# Project directory - by Quek
+PROJECT_DIR = ''
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
@@ -90,5 +93,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
+    'south',
+    'leads',
 )
