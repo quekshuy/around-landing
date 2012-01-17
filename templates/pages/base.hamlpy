@@ -1,0 +1,60 @@
+!!! 5
+%html
+    %head
+        %title
+            - block title
+                around! - Rewards All Round!
+        - block css
+            %link{ 'href': '{{STATIC_URL}}css/960/reset.css', 'rel':'stylesheet' }/
+            %link{ 'href': '{{STATIC_URL}}css/960/text.css', 'rel':'stylesheet' }/
+            %link{ 'href': '{{STATIC_URL}}css/960/960.css', 'rel':'stylesheet' }/
+            :plain
+               <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700' rel='stylesheet' type='text/css'> 
+            - block extra-css
+                %link{ 'href': '{{STATIC_URL}}css/around.css', 'rel':'stylesheet' }/
+        - block js
+            :plain
+                <script src="http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
+            - block extra-js
+    %body
+        - block content
+            - block header
+                #header
+                    .container_12
+                        .grid_2
+                           / For the logo 
+                           #around-logo
+                        %nav.grid_7.suffix_1
+                           / For the menu
+                           %ul
+                               %li.grid_2.alpha
+                                    %h4
+                                        How It Works
+                               %li.grid_2
+                                    %h4
+                                        Merchants
+                               %li.grid_2.omega
+                                    %h4
+                                        Contact Us
+                        .grid_2.share-panel
+                            %img{ 'src': '/static/imgs/fb.png', 'class': 'img-fb' }
+                            %img{ 'src': '/static/imgs/twitter.png', 'class': 'img-twitter' }
+        - block main-content
+        - block footer
+            #footer
+                .container_12
+                    .grid_4
+                        %nav
+                            %ul.nav  
+                                %li
+                                    About
+                                %li
+                                    Blog
+                                %li
+                                    Support
+                    .grid_8
+                        .copyright-text
+                            Copyright &copy; 2012 Gozo Labs Pte. Ltd. All Rights Reserved
+
+    - block body-js
+

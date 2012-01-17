@@ -1,0 +1,14 @@
+.scroll-panel
+    .inner-panel
+        %img{'id':'centerpiece-1', 'src': '/static/imgs/centerpiece-1.png' }/
+        #centerpiece1-text
+            #top
+                %h2
+                    Forget Paper Loyalty Cards
+            #bottom
+                %h2
+                    Bring loyalty 
+                    %span.emp
+                        MOBILE
+
+

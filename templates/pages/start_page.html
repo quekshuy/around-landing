@@ -1,0 +1,74 @@
+{% extends "pages/base.html" %}
+{% block main-content %}
+    <div id='start-content'>
+<!-- has the background tiling -->
+        <div id='main-panel' class='container_12'>
+            <div class='grid_12'>
+<!-- for the scroller -->
+                <div class='scrollable'>
+                    <div class='items'>
+                        <div>
+                            {% include "pages/panels/one.html" %}
+                        </div>
+                        <div>
+                            {% include "pages/panels/two.html" %}
+                        </div>
+                        <div>
+                            {% include "pages/panels/three.html" %}
+                        </div>
+                    </div>
+                </div>
+                <div class='navi'></div>
+            </div>
+        </div>
+        <div id='add-details'>
+            <div class='container_12'>
+                <div class='grid_4 add-details-panel'>
+                    <h3>
+                        As mentioned in
+                    </h3>
+                    <p class='press-panel'>
+                        <img src='/static/imgs/straits-times.png' />
+                        <img src='/static/imgs/yahoo-news.gif' />
+                        <img src='/static/imgs/lianhe.gif' />
+                    </p>
+                </div>
+                <div class='grid_4 add-details-panel'>
+                    <h3>
+                        Free Download
+                    </h3>
+                    <div class='download-panel'>
+                        <img id='img-app-store' src='/static/imgs/ios-app-store.gif' />
+                        <div>
+                            Coming soon...
+                        </div>
+                        <div>
+                            <img src='/static/imgs/android.png' />
+                            <img src='/static/imgs/bb.png' />
+                        </div>
+                    </div>
+                </div>
+                <div class='grid_4 add-details-panel'>
+                    <div class='signup-panel'>
+                        <h3>
+                            Sign Up As a Partner Now!
+                        </h3>
+                        <p>
+                            Easy, paperless loyalty programs.
+                            <br />
+                            Exposure to a growing base of consumers.
+                            <br />
+                            Up-to-date reports on your customer base.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block body-js %}
+    <script>
+        $(function() {             $(".scrollable").scrollable({circular: true}).navigator().autoscroll({                interval: 5000            });
+        });
+    </script>
+{% endblock %}

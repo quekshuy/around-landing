@@ -1,0 +1,56 @@
+- extends "pages/base.html"
+- block main-content
+    #start-content
+        / has the background tiling
+        #main-panel.container_12
+            .grid_12
+                / for the scroller
+                .scrollable
+                    .items
+                        %div
+                            - include "pages/panels/one.html"
+                        %div
+                            - include "pages/panels/two.html"
+                        %div
+                            - include "pages/panels/three.html"
+                .navi
+        #add-details
+            .container_12
+                .grid_4.add-details-panel
+                    %h3
+                        As mentioned in 
+                    %p.press-panel
+                        %img{ 'src': '/static/imgs/straits-times.png'}
+                        %img{ 'src': '/static/imgs/yahoo-news.gif' }
+                        %img{ 'src': '/static/imgs/lianhe.gif' }
+                .grid_4.add-details-panel
+                    %h3
+                        Free Download
+                    .download-panel
+                        %img{ 'id': 'img-app-store', 'src': '/static/imgs/ios-app-store.gif' }
+                        %div
+                            Coming soon...
+                        %div
+                            %img{ 'src': '/static/imgs/android.png' }
+                            %img{ 'src': '/static/imgs/bb.png' }
+                .grid_4.add-details-panel  
+                    .signup-panel
+                        %h3
+                            Sign Up As a Partner Now!
+                        %p
+                            Easy, paperless loyalty programs.
+                            %br/
+                            Exposure to a growing base of consumers.
+                            %br/
+                            Up-to-date reports on your customer base.
+
+                
+- block body-js
+    %script
+        $(function() { 
+            $(".scrollable").scrollable({circular: true}).navigator().autoscroll({
+                interval: 5000
+            });
+        });
+        
+

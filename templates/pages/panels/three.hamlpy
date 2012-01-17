@@ -1,0 +1,10 @@
+.scroll-panel
+    .inner-panel
+        #centerpiece3-text
+            %h2
+                Gather 
+                %span.emp
+                    INSIGHTS
+                on your promotions and loyalty program
+        %img{'id':'centerpiece-3', 'src': '/static/imgs/centerpiece-3.png' }/
+
