@@ -1,0 +1,92 @@
+- extends "pages/base.html"
+- block title
+    around! - Contact Us
+- block extra-css
+    %link{ 'href': '{{STATIC_URL}}css/around-signup.css', 'rel':'stylesheet' }/
+    %link{ 'href': '{{STATIC_URL}}css/around-forms.css', 'rel':'stylesheet' }/
+-block extra-js
+    :plain
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+- block main-content
+    #signup-page
+        %form#merchant-signup-form{ 'action': '', 'method': 'post', 'enctype': 'multipart/form-data' }
+            - csrf_token
+            .container_12
+                .grid_12
+                    %h1.heading
+                        FREE Trial Sign Up
+            #signup-form.container_12
+                .grid_12
+                
+                    - if form
+                        .scrollable
+                            .items
+                                %div.form-page
+
+                                    -# --------------- Page 1 ---------------
+
+                                    %ul.form-panel
+                                        %li
+                                            %label{ 'for': 'id_name' } 
+                                                = form.name.label
+                                                %span.soft
+                                                    (required)
+                                            = form.name
+
+                                        %li
+                                            %label{ 'for': 'id_email' }
+                                                = form.email.label
+                                                %span.soft
+                                                    (required)
+                                            = form.email
+                                        %li 
+                                            %label{ 'for': 'id_contact_number' }
+                                                = form.contact_number.label
+                                                %span.soft
+                                                    (required)
+                                            = form.contact_number
+                                        %li
+                                            %a{ 'class': 'button continue' }
+                                                Continue
+                                    .more-panel
+                                        %h4
+                                            Did you know?
+                                        %p 
+                                            Did you know that 
+                                            %strong
+                                                around!
+                                            merchants have had on average a 20% repeat visitor rate?
+
+                                %div.form-page
+
+                                    -# --------------- Page 2 ---------------
+
+                                    %ul.form-panel
+                                        %li
+                                            %label{ 'for': 'id_brand_name' }
+                                                = form.brand_name.label
+                                                %span.soft
+                                                    (required)
+                                            = form.brand_name
+
+                        
+                                
+
+- block body-js
+
+    :plain
+        <script>
+
+            $(function() {
+                $(".scrollable").scrollable();
+                $('.form-page ul li a.continue').click(function() {
+                    var api = $('.scrollable').data('scrollable');
+                    var p = $(this).closest('.form-page');
+                    api.next(400);
+                    if (p) { 
+                        p.fadeTo(300, 0);
+                    }
+                });
+            });
+        </script>
+

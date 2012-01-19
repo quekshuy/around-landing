@@ -1,0 +1,112 @@
+@import "around.scss";
+
+$soft-color: rgb(191, 191, 191);
+$signup-form-height: 460px;
+$signup-form-width: 900px;
+$form-panel-width: 490px;
+
+.heading { 
+    display: block;
+    color: rgb(96, 46, 19);
+    float: right;
+}
+#signup-page { 
+
+    background-color: $page-bgcolor;
+    padding: { 
+        top: 56px;
+        bottom: 37px;
+    }
+
+    #signup-form { 
+
+        background-color: white;
+        display: block;
+        /* rounded corners */
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+
+        .controls-panel { 
+            position: relative;
+            z-index: 3;
+            top: -28px;
+            left: 13px;
+        }
+
+        .scrollable { 
+            position: relative;
+            overflow: hidden;
+            width: $signup-form-width;
+            /*min-height: $signup-form-height;*/
+            height: $signup-form-height;
+
+            .items { 
+                width: 20000em;
+                position: absolute;
+
+                div { 
+                    float: left;
+
+                    .form-page { 
+                        width: $signup-form-width;
+                    }
+                }
+            }
+        }
+
+        label { 
+            font-size: 17px;
+            font-weight: bold;
+            width: auto;
+            padding: { 
+                left: 7px;
+                bottom: 6px;
+            }
+            span.soft { 
+                color: $soft-color;
+            }
+        }
+        ul { 
+            list-style-type: none;
+            li { 
+                padding-bottom: 6px;
+            }
+        }
+
+        .form-panel { 
+            margin-top: 45px;
+            float: left;
+            width: $form-panel-width;
+            .action { 
+                margin-top: 74px;
+                a {
+                    float: right;
+                    width: 83px;
+                    text-align: center;
+                    font-size: 17px;
+                    /*padding: { */
+                        /*left: 20px;*/
+                        /*right: 20px;*/
+                    /*}*/
+                }
+            }
+        }
+
+        .more-panel { 
+            margin-top: 45px;
+            margin-right: 23px;
+            float: left;
+            background-color: rgb(235, 235, 235);
+            width: $signup-form-width - $form-panel-width - 3*34px;
+            margin-left: 34px;
+            /* rounded corners */
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            border-radius: 8px;
+            padding: 12px 12px;
+        }
+
+    } /* end #signup-form */
+
+}
