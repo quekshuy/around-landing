@@ -1,0 +1,79 @@
+- extends "pages/base.html"
+- block title
+    around! How Does It All Work?
+- block extra-css
+    %link{'href': '/static/css/around-how.css', 'rel': 'stylesheet' }/
+- block main-content
+    #generic-content
+        .container_12
+            .grid_7
+                %h1
+                    What do I do with 
+                    %span.emp
+                        around!
+                    ?
+            .grid_5
+                .download-panel
+                    %h4
+                        Download FREE
+                    %a{ 'href': 'http://itunes.apple.com/sg/app/around!/id443951029?ls=1&mt=8' }
+                        %img{ 'id': 'img-app-store', 'src': '/static/imgs/ios-app-store.gif' }
+                    / 
+                        %img{ 'src': '/static/imgs/android.png' }
+        .container_12
+            .generic-panel.grid_12
+                .grid_6.alpha
+                    %p
+                        %span.emp
+                            around!
+                        is an application on the iPhone that allows users to collect loyalty stamps on loyalty cards from merchants. You just have to scan a QR code on the merchant's premises and earn rewards for patronising, stamp by stamp. Never have to stuff loyalty cards in your wallet ever again.
+                    %p 
+                        %strong
+                            Sssh.
+                        Some merchants even offer discounts and promotions that can be enjoyed only if you use 
+                        %span.emp
+                            around!
+                        to redeem them.
+                        %br/
+                        So download the app now - it's 
+                        %strong
+                            FREE.
+                .grid_6.omega
+                    #merchant-signup-panel
+                        %h3
+                            Reasons why you should partner around! as a merchant.
+                        %ul
+                            %li
+                                Easy, paperless loyalty programs
+                            %li
+                                Exposure to a growing base of consumers
+                            %li
+                                Up-to-date reports on your customer base
+                        .signup-link.group
+                            :plain
+                                <a href="{% url page-contact-us %}">Sign Up Now</a>
+                .grid_12
+                    %ul.frames.group
+                        %li.frame.grid_3.alpha
+                            #frame0
+                                .caption
+                                    %h4
+                                        Looking for rewards?
+                        %li.frame.grid_3
+                            #frame1
+                                .caption
+                                    %h4
+                                        Find privileges from your favourite merchant near you
+                        %li.frame.grid_3
+                            #frame2
+                                .caption
+                                    %h4
+                                        Tap to Redeem and Scan a QR code at the merchant
+                        %li.frame.grid_3.omega
+                            #frame3
+                                .caption
+                                    %h4
+                                        Start collecting those stamps
+                            
+
+

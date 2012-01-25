@@ -1,0 +1,63 @@
+{% extends "pages/base.html" %}
+{% block title %}
+    around! Our Partnering Merchants
+{% endblock %}
+{% block extra-css %}
+    <link href='/static/css/around-merchants.css' rel='stylesheet' />
+{% endblock %}
+{% block main-content %}
+    <div id='merchant-page'>
+        <div class='container_12'>
+            <div class='grid_12'>
+                <h1>
+                    Our Partnering Merchants
+                </h1>
+            </div>
+        </div>
+        <div id='merchant-panel' class='container_12'>
+            <div class='grid_12'>
+                <div id='merchant-grid' class='grid_7 suffix_1 alpha'>
+                    <p>
+                        Here's a selection of our partnering merchants, just itching to reward you handsomely for coming back to their stores.
+                        <br />
+                    </p>
+                    {% if merchants %}
+                        <ul class='group'>
+                         {% for m in merchants %}
+                            <li>
+<a href="{{m.website}}">
+    <img src="{{MEDIA_URL}}{{m.card_image}}" alt="{{m.name}}" />
+</a>
+                            </li>
+                         {% endfor %}
+                        </ul>
+                    {% endif %}
+                    <p>
+                        Not enough?
+<a href="{% url page-merchant-request %}">Tell</a>
+                        us who you would like to see on
+                        <strong>
+                            around!
+                        </strong>
+                    </p>
+                </div>
+                <div id='merchant-signup-call' class='grid_4 omega'>
+                    <div id='merchant-signup-panel'>
+                        <h3>
+<a href="{% url merchant-signup-0 %}">
+                            Sign Up As a Partner Merchant Now!
+</a>
+                        </h3>
+                        <p>
+                            Easy, paperless loyalty programs.
+                            <br />
+                            Exposure to a growing base of consumers.
+                            <br />
+                            Up-to-date reports on your customer base.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

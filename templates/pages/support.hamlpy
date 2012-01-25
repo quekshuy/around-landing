@@ -1,0 +1,23 @@
+
+- extends "pages/base.html"
+- block title
+    around! Support
+- block main-content
+    #generic-content
+        .container_12
+            .grid_12
+                %h1
+                    Help! I need somebody.
+        .container_12
+            .grid_12.generic-panel
+                Looking for some kind of help? 
+                %br/
+                Facing problems getting your rewards?
+                %br/
+                Or would you like to give us some feedback?
+                %br/
+                You can contact us via email at 
+                :plain
+                    <a href="mailto:feedback@around.com.sg">feedback@around.com.sg</a>
+                
+            

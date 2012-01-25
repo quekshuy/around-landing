@@ -1,0 +1,85 @@
+@import "around.scss";
+@import "around-forms.scss";
+
+$soft-color: rgb(191, 191, 191);
+h1, h2 { 
+    color: $headings-color;
+}
+
+@mixin contact-panel {
+    /* rounded corners */
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    padding: 19px 19px;
+    height: 143px;
+}
+
+#signup-form { 
+    
+    padding: 0;
+    margin: { 
+        left: -14px;
+    }
+    ul { 
+        list-style-type: none;
+        li { 
+            padding-bottom: 12px;
+            &.highlight { 
+                border: 1px solid rgb(163, 98, 10);
+                background-color: rgb(255, 247, 220);
+            }
+            ul.errorlist { 
+                list-style-type: none;
+                li { 
+                    font-style: italic;
+                    color: red;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .form-panel { 
+        margin-top: 13px;
+        input[type=submit] { 
+            margin-top: 23px;
+        }
+        label { 
+            font-size: 17px;
+            font-weight: bold;
+            margin-bottom: 4px;
+            margin-left: 3px;
+            width: auto;
+        }
+    } /* end .form-panel */
+
+} /* end #signup-form */
+
+#contact-page { 
+
+    background-color: $page-bgcolor;
+    font-size: 1.3em;
+    padding: { 
+        top: 86px;
+        bottom: 107px;
+    }
+
+    h1, h2, h3, h4, h5, h6 { 
+        color: $headings-color;
+    }
+
+    #contact-left {
+        background-color: white;
+        @include contact-panel;
+    }
+
+    #contact-right { 
+        background-color: white;
+        @include contact-panel;
+        padding-bottom: 0px;
+        display: block;
+        height: auto;
+
+    }
+}

@@ -27,7 +27,8 @@
                     %h3
                         Free Download
                     .download-panel
-                        %img{ 'id': 'img-app-store', 'src': '/static/imgs/ios-app-store.gif' }
+                        %a{'href': 'http://itunes.apple.com/sg/app/around!/id443951029?ls=1&mt=8', 'target': 'blank'}
+                            %img{ 'id': 'img-app-store', 'src': '/static/imgs/ios-app-store.gif' }
                         %div
                             Coming soon...
                         %div
@@ -36,7 +37,8 @@
                 .grid_4.add-details-panel  
                     .signup-panel
                         %h3
-                            Sign Up As a Partner Now!
+                            :plain
+                                <a href="/contact/">Sign Up As a Partner Now!</a>
                         %p
                             Easy, paperless loyalty programs.
                             %br/
@@ -49,7 +51,8 @@
     %script
         $(function() { 
             $(".scrollable").scrollable({circular: true}).navigator().autoscroll({
-                interval: 5000
+                interval: 5000,
+                autopause: false,
             });
         });
         

@@ -1,0 +1,17 @@
+- extends "pages/base.html"
+- block title
+    around! Successful Merchant Signup
+- block main-content
+    #generic-content
+        .container_12
+            .generic-panel.grid_12
+                %h1
+                    Thanks for contacting us! 
+                %p
+                    We'll get back to you as soon as is humanly possible.
+                    %br/
+                    :plain
+                        Meanwhile, click <a href="/">here</a> to go back to the landing page.
+
+
+

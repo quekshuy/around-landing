@@ -1,0 +1,106 @@
+{% extends "pages/base.html" %}
+{% block title %}
+    around! - Contact Us
+{% endblock %}
+{% block extra-css %}
+    <link href='{{STATIC_URL}}css/around-signup.css' rel='stylesheet' />
+    <link href='{{STATIC_URL}}css/around-forms.css' rel='stylesheet' />
+{% endblock %}
+{% block extra-js %}
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+{% endblock %}
+{% block main-content %}
+    <div id='signup-page'>
+        <form id='merchant-signup-form' action='' method='post' enctype='multipart/form-data'>
+            {% csrf_token %}
+            <div class='container_12'>
+                <div class='grid_12'>
+                    <h1 class='heading'>
+                        FREE Trial Sign Up
+                    </h1>
+                </div>
+            </div>
+            <div id='signup-form' class='container_12'>
+                <div class='grid_12'>
+                    {% if form %}
+                        <div class='scrollable'>
+                            <div class='items'>
+                                <div class='form-page'>
+<!-- Page 1 -->
+                                    <ul class='form-panel'>
+                                        <li>
+                                            <label for='id_name'>
+                                                {{ form.name.label }}
+                                                <span class='soft'>
+                                                    (required)
+                                                </span>
+                                            </label>
+                                            {{ form.name }}
+                                        </li>
+                                        <li>
+                                            <label for='id_email'>
+                                                {{ form.email.label }}
+                                                <span class='soft'>
+                                                    (required)
+                                                </span>
+                                            </label>
+                                            {{ form.email }}
+                                        </li>
+                                        <li>
+                                            <label for='id_contact_number'>
+                                                {{ form.contact_number.label }}
+                                                <span class='soft'>
+                                                    (required)
+                                                </span>
+                                            </label>
+                                            {{ form.contact_number }}
+                                        </li>
+                                    </ul>
+                                    <div class='more-panel'>
+                                        <h4>
+                                            Did you know?
+                                        </h4>
+                                        <p>
+                                            Did you know that
+                                            <strong>
+                                                around!
+                                            </strong>
+                                            merchants have had on average a 20% repeat visitor rate?
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class='form-page'>
+<!-- Page 2 -->
+                                    <ul class='form-panel'>
+                                        <li>
+                                            <label for='id_brand_name'>
+                                                {{ form.brand_name.label }}
+                                                <span class='soft'>
+                                                    (required)
+                                                </span>
+                                            </label>
+                                            {{ form.brand_name }}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='controls-panel'>
+                            <a class='prev button'>
+                                Previous
+                            </a>
+                            <a class='prev next'>
+                                Continue
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+{% block body-js %}
+<script>
+    $(function() {                $(".scrollable").scrollable();            });
+</script>
+{% endblock %}

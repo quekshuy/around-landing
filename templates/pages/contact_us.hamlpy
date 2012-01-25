@@ -1,0 +1,46 @@
+- extends "pages/base.html"
+- block extra-css
+    %link{ 'href': '{{STATIC_URL}}css/around-contact.css', 'rel':'stylesheet' }/
+- block title
+    around! - Contact Us
+
+- block header-item-contact-class
+    active
+
+- block main-content
+    #contact-page
+        - if messages
+            .container_12
+                %ul#messages.grid_12
+                    - for message in messages
+                        :plain
+                            <li class="{% if message.tags %} {{message.tags}}{%endif%}">{{message}}</li>
+
+        .container_12
+            .grid_4.suffix_1.prefix_1
+                %h2
+                    &nbsp;&nbsp;Contact Us
+                %p#contact-left
+                    If you have any feedback, suggestions or would just like to say hello, feel free to email us at 
+                    %a{ 'href': 'mailto:contact@around.com.sg' }
+                        contact@around.com.sg
+            .grid_5.suffix_1
+                %h2
+                    &nbsp;&nbsp;Interested to partner us?
+                #contact-right
+                    Just a few quick questions and we'll get back to you faster than you can say "Rewards All Round".
+                    %form#merchant-signup-form{ 'action': '', 'method': 'post'}
+                        - csrf_token
+                        #signup-form
+                            - if form
+                                - include "pages/signup-form/form0.html"
+
+
+                        
+
+                
+                
+            
+    
+
+

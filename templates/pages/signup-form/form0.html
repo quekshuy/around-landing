@@ -1,0 +1,14 @@
+<div class='form-page'>
+    <ul class='form-panel'>
+        {% for field in form %}
+<li class="{% if field.errors %}highlight{%endif%}">
+    {{field.label_tag}}
+    {{field}}
+    {{ field.errors}}
+<li>
+        {% endfor %}
+        <li>
+            <input class='button' type='submit' value='Yes to rewards!' />
+        </li>
+    </ul>
+</div>

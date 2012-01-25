@@ -16,3 +16,5 @@ DATABASES = {
     }
 }
 
+
+SALES_TEAM_EMAILS = ['quekshuy@gmail.com']

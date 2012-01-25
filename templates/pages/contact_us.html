@@ -1,0 +1,52 @@
+{% extends "pages/base.html" %}
+{% block extra-css %}
+    <link href='{{STATIC_URL}}css/around-contact.css' rel='stylesheet' />
+{% endblock %}
+{% block title %}
+    around! - Contact Us
+{% endblock %}
+{% block header-item-contact-class %}
+    active
+{% endblock %}
+{% block main-content %}
+    <div id='contact-page'>
+        {% if messages %}
+            <div class='container_12'>
+                <ul id='messages' class='grid_12'>
+                    {% for message in messages %}
+<li class="{% if message.tags %} {{message.tags}}{%endif%}">{{message}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        <div class='container_12'>
+            <div class='grid_4 suffix_1 prefix_1'>
+                <h2>
+                    &nbsp;&nbsp;Contact Us
+                </h2>
+                <p id='contact-left'>
+                    If you have any feedback, suggestions or would just like to say hello, feel free to email us at
+                    <a href='mailto:contact@around.com.sg'>
+                        contact@around.com.sg
+                    </a>
+                </p>
+            </div>
+            <div class='grid_5 suffix_1'>
+                <h2>
+                    &nbsp;&nbsp;Interested to partner us?
+                </h2>
+                <div id='contact-right'>
+                    Just a few quick questions and we'll get back to you faster than you can say "Rewards All Round".
+                    <form id='merchant-signup-form' action='' method='post'>
+                        {% csrf_token %}
+                        <div id='signup-form'>
+                            {% if form %}
+                                {% include "pages/signup-form/form0.html" %}
+                            {% endif %}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

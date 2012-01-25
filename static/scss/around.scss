@@ -1,14 +1,78 @@
 $theme-font-family: 'Rockwell', 'Rokkitt', serif;
 
+/** Clearfix **/
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+/** End clearfix hack **/
+
 h1, h2, h3, h4, h5, h6 { 
     font-family: $theme-font-family;
     font-weight: 900;
 
 }
 
+/* general button styling taken from css from nexmo.com */
+input.button,
+a.button {
+    border: 1px solid #874b16;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    padding: 19px 20px 14px;
+    margin-bottom: 30px;
+    font-size: 1.6em;
+    font-weight: 600;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
+    background: #e46417 url(../img/button_grad_bg.png) repeat-x; /* Old browsers */
+    background: -moz-linear-gradient(top, #FCCAA9 1%, #FD8D3B 2%, #E46417 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#FCCAA9), color-stop(2%,#FD8D3B), color-stop(100%,#E46417)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #FCCAA9 1%,#FD8D3B 2%,#E46417 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #FCCAA9 1%,#FD8D3B 2%,#E46417 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #FCCAA9 1%,#FD8D3B 2%,#E46417 100%); /* IE10+ */
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FCCAA9', endColorstr='#E46417',GradientType=0 );  IE6-9 */
+    background: linear-gradient(top, #FCCAA9 1%,#FD8D3B 2%,#E46417 100%); /* W3C */ 
+}
+
+input.button:hover,
+a.button:hover {
+    background: #e67b3a url(../img/button_grad_bg_hover.png) repeat-x; /* Old browsers */
+    background: -moz-linear-gradient(top, #FCCAA9 1%, #FEA86A 2%, #F87221 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#FCCAA9), color-stop(2%,#FEA86A), color-stop(100%,#F87221)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #FCCAA9 1%,#FEA86A 2%,#F87221 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #FCCAA9 1%,#FEA86A 2%,#F87221 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #FCCAA9 1%,#FEA86A 2%,#F87221 100%); /* IE10+ */
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FCCAA9', endColorstr='#F87221',GradientType=0 );  IE6-9 */
+    background: linear-gradient(top, #FCCAA9 1%,#FEA86A 2%,#F87221 100%); /* W3C */ 
+}
+
+a.button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    margin-bottom: none;
+    font-size: 1em;
+    text-decoration: none!important;
+    color: #ffffff; 
+}
+
+
 $header-bgcolor: rgb(191,27,32);
 $nav-hover-color: rgb(254, 114, 0);
 $nav-active-color: rgb(231, 195, 194);
+$page-bgcolor: rgb(234, 226, 215);
+$headings-color: rgb(96, 46, 19);
 
 #header { 
 
@@ -24,6 +88,9 @@ $nav-active-color: rgb(231, 195, 194);
         background: url(/static/imgs/around_logo.png);
         position: relative;
         z-index: 1;
+        &:hover { 
+            cursor: pointer;
+        }
     }
 
     nav { 
@@ -34,12 +101,29 @@ $nav-active-color: rgb(231, 195, 194);
             li { 
                 float: left;
                 text-align: center;
-                &:active { 
+
+                &.active { 
                     color: rgb(231, 195, 194);
                 }
 
-                &:hover { 
-                    color: rgb(254, 114, 0);
+                a { 
+                    text-decoration: none;
+
+                    &:link, &:visited { 
+                        color: white;
+                    }
+
+                    &:hover { 
+                        color: $nav-hover-color;
+                    }
+
+                    &:active { 
+                        color: $nav-active-color;
+                    }
+
+                    &.active { 
+                        color: $nav-active-color;
+                    }
                 }
             }
         }
@@ -59,6 +143,35 @@ $start-content-height: 780px;
 $main-panel-height: 574px;
 $add-details-height: $start-content-height - $main-panel-height;
 
+@mixin signup-panel-base {
+    h3 { padding: 0; margin-bottom: 4px; }
+    background: #bf1b20; /* Old browsers */
+    /* round corners */
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    padding: 10px 10px;
+    color: white;
+}
+
+.signup-panel { 
+
+    /* gradient background */
+    background: #bf1b20; /* Old browsers */
+    /* drop-shadow */
+    -webkit-box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 1);
+    @include signup-panel-base;
+
+    a { 
+        text-decoration: none;
+        &:link { color: white; }
+        &:visited { color: white; }
+        &:hover { color: $nav-hover-color; }
+    }
+}
+
 #start-content { 
 
     background: url(/static/imgs/wood-tile-background.jpg) repeat-x;
@@ -73,6 +186,7 @@ $add-details-height: $start-content-height - $main-panel-height;
 
         height: $main-panel-height;
 
+        /** jQuery Scroller */
         .scrollable { 
             position: relative;
             overflow: hidden;
@@ -206,7 +320,7 @@ $add-details-height: $start-content-height - $main-panel-height;
                 }
             }
 
-            .download-panel { 
+            .download-panel {  
                 margin-top: -12px;
                 img#img-app-store { 
                     width: 123px;
@@ -226,27 +340,9 @@ $add-details-height: $start-content-height - $main-panel-height;
 
                     }
                 }
-            }
-        }
-
-        .signup-panel { 
-
-            h3 { padding: 0; margin-bottom: 4px; }
-            color: white;
-            /* gradient background */
-            background: #bf1b20; /* Old browsers */
-            /* drop-shadow */
-            -webkit-box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 1);
-            -moz-box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 1);
-            box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 1);
-            /* round corners */
-            -webkit-border-radius: 8px;
-            -moz-border-radius: 8px;
-            border-radius: 8px;
-
-            padding: 10px 10px;
-        }
-    }
+            } /* end .download-panel */
+        } /* end .add-details-panel */
+    } /* end #add-details */
 
     .navi {
         margin: { 
@@ -291,11 +387,35 @@ $add-details-height: $start-content-height - $main-panel-height;
         margin-top: -34px;
         li { 
             float: left;
+            a { 
+                text-decoration: none;
+                &:link { 
+                    color: $header-bgcolor;
+                }
+                &:visited { 
+                    color: $header-bgcolor;
+                }
+            }
         }
     }
 
     .copyright-text { 
         float: right;
         color: rgb(172, 172, 172);
+    }
+}
+
+#generic-content { 
+    background-color: $page-bgcolor;
+    padding-bottom: 107px;
+    padding-top: 76px;
+    font-size: 16px;
+    .generic-panel { 
+        background-color: white;
+        /* rounded corners */
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+        padding: 19px 19px;
     }
 }

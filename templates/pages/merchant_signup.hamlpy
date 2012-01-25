@@ -17,60 +17,73 @@
                         FREE Trial Sign Up
             #signup-form.container_12
                 .grid_12
-                
-                    - if form
-                        .scrollable
-                            .items
-                                %div.form-page
+                    - if messages
+                        %ul#messages.group
+                            - for message in messages
+                                :plain
+                                    <li class="{% if message.tags %} {{message.tags}}{%endif%}">{{message}}</li>
 
-                                    -# --------------- Page 1 ---------------
-
-                                    %ul.form-panel
-                                        %li
-                                            %label{ 'for': 'id_name' } 
-                                                = form.name.label
-                                                %span.soft
-                                                    (required)
-                                            = form.name
-
-                                        %li
-                                            %label{ 'for': 'id_email' }
-                                                = form.email.label
-                                                %span.soft
-                                                    (required)
-                                            = form.email
-                                        %li 
-                                            %label{ 'for': 'id_contact_number' }
-                                                = form.contact_number.label
-                                                %span.soft
-                                                    (required)
-                                            = form.contact_number
-                                        %li
-                                            %a{ 'class': 'button continue' }
-                                                Continue
-                                    .more-panel
-                                        %h4
-                                            Did you know?
-                                        %p 
-                                            Did you know that 
-                                            %strong
-                                                around!
-                                            merchants have had on average a 20% repeat visitor rate?
-
-                                %div.form-page
-
-                                    -# --------------- Page 2 ---------------
-
-                                    %ul.form-panel
-                                        %li
-                                            %label{ 'for': 'id_brand_name' }
-                                                = form.brand_name.label
-                                                %span.soft
-                                                    (required)
-                                            = form.brand_name
-
-                        
-                                
+                    #signup-state-bar.group
+                        .state-part
+                            :plain
+                                <div class="step-bullet {% ifequal step_number 0 %}active{%endifequal%}">
+                            %div.text
+                                Step
+                            %div.number
+                                1
+                            :plain
+                                </div>
+                                <div class="step-label {% ifequal step_number 0 %}active{%endifequal%}">
+                                Basic Info
+                            :plain
+                                </div>
+                        .state-part
+                            :plain
+                                <div class="step-bullet {% ifequal step_number 1 %}active{%endifequal%}">
+                            %div.text
+                                Step
+                            %div.number
+                                2
+                            :plain
+                                </div>
+                                <div class="step-label {% ifequal step_number 1 %}active{%endifequal%}">
+                                Brand Details
+                            :plain
+                                </div>
+                        .state-part
+                            :plain
+                                <div class="step-bullet {% ifequal step_number 2 %}active{%endifequal%}">
+                            %div.text
+                                Step
+                            %div.number
+                                3
+                            :plain
+                                </div>
+                                <div class="step-label {% ifequal step_number 2 %}active{%endifequal%}">
+                                Miscellaneous
+                            :plain
+                                </div>
+                        .state-part
+                            :plain
+                                <div class="step-bullet {% ifequal step_number 3 %}active{%endifequal%}">
+                            %div.text
+                                Step
+                            %div.number
+                                    4
+                            :plain
+                                </div>
+                                <div class="step-label {% ifequal step_number 3 %}active{%endifequal%}">
+                                Done!
+                            :plain
+                                </div>
+                            
+                    - ifequal step_number 0
+                        - include "pages/signup-form/form0.html"
+                    - else
+                        - ifequal step_number 1
+                            - include "pages/signup-form/form1.html"
+                        - else
+                            - include "pages/signup-form/form2.html"
 
 - block body-js
 

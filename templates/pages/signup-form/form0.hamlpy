@@ -1,0 +1,15 @@
+
+.form-page
+
+    -# --------------- Page 1 ---------------
+
+    %ul.form-panel
+        - for field in form
+            :plain
+                <li class="{% if field.errors %}highlight{%endif%}">
+                    {{field.label_tag}}
+                    {{field}}
+                    {{ field.errors}}
+                <li>
+        %li
+            %input{ 'type': 'submit', 'class': 'button', 'value': 'Yes to rewards!' }

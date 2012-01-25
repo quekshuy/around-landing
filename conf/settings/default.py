@@ -48,12 +48,12 @@ USE_L10N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = '/home/gozo/deploy/around_landing/uploads/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = ''
+MEDIA_URL = '/around/media/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -92,8 +92,16 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
-    # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     'south',
     'leads',
+    'pages',
 )
+
+
+# MAILGUN related info
+SALES_TEAM_EMAILS = ['dax@gozolabs.com', 'liling@gozolabs.com', 
+        'quek@gozolabs.com']
+MAILGUN_API_KEY = 'key-0ha0gq5m481jrrtjgch7c0ovwrdxrd58'
+MAILGUN_API_URL = 'https://api.mailgun.net/v2'
+MAILGUN_DOMAIN = 'around.mailgun.org'

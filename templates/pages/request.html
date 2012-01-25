@@ -1,0 +1,60 @@
+{% extends "pages/base.html" %}
+{% block title %}
+    around! I would like to see a merchant
+{% endblock %}
+{% block extra-css %}
+    <link href='{{STATIC_URL}}css/around-contact.css' rel='stylesheet' />
+{% endblock %}
+{% block main-content %}
+    <div id='generic-content'>
+        {% if messages %}
+            <div class='container_12'>
+                <ul id='messages' class='grid_12'>
+                    {% for message in messages %}
+<li class="{% if message.tags %} {{message.tags}}{%endif%}">{{message}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        <div class='container_12'>
+            <div class='grid_8 suffix_4'>
+                <h1>
+                    Want to see a merchant on
+                    <span class='emp'>
+                        around!?
+                    </span>
+                </h1>
+                <p>
+                    It's super important you let us know who you'd like to see on around!. Go ahead, just fill in a short survey below and we'll get to it.
+                </p>
+                <p>
+                    You can also like us on
+<a target="blank" href="https://www.facebook.com/seewhatsaround/">Facebook</a> or follow us on <a target="blank" href="http://twitter.com/aroundSG">Twitter</a> to find out more about the latest offerings. 
+                </p>
+                <div class='generic-panel'>
+                    <form id='merchant-signup-form' action='' method='post'>
+                        {% csrf_token %}
+                        <div id='signup-form'>
+                            {% if form %}
+                                <div class='form-page'>
+                                    <ul class='form-panel'>
+                                        {% for field in form %}
+<li class="{% if field.errors %}highlight{%endif%}">
+    {{field.label_tag}}
+    {{field}}
+    {{ field.errors}}
+<li>
+                                        {% endfor %}
+                                        <li>
+                                            <input class='button' type='submit' value='Submit' />
+                                        </li>
+                                    </ul>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

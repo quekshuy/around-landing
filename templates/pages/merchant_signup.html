@@ -1,0 +1,106 @@
+{% extends "pages/base.html" %}
+{% block title %}
+    around! - Contact Us
+{% endblock %}
+{% block extra-css %}
+    <link href='{{STATIC_URL}}css/around-signup.css' rel='stylesheet' />
+    <link href='{{STATIC_URL}}css/around-forms.css' rel='stylesheet' />
+{% endblock %}
+{% block extra-js %}
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+{% endblock %}
+{% block main-content %}
+    <div id='signup-page'>
+        <form id='merchant-signup-form' action='' method='post' enctype='multipart/form-data'>
+            {% csrf_token %}
+            <div class='container_12'>
+                <div class='grid_12'>
+                    <h1 class='heading'>
+                        FREE Trial Sign Up
+                    </h1>
+                </div>
+            </div>
+            <div id='signup-form' class='container_12'>
+                <div class='grid_12'>
+                    {% if messages %}
+                        <ul id='messages' class='group'>
+                            {% for message in messages %}
+<li class="{% if message.tags %} {{message.tags}}{%endif%}">{{message}}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    <div id='signup-state-bar' class='group'>
+                        <div class='state-part'>
+<div class="step-bullet {% ifequal step_number 0 %}active{%endifequal%}">
+                            <div class='text'>
+                                Step
+                            </div>
+                            <div class='number'>
+                                1
+                            </div>
+</div>
+<div class="step-label {% ifequal step_number 0 %}active{%endifequal%}">
+Basic Info
+</div>
+                        </div>
+                        <div class='state-part'>
+<div class="step-bullet {% ifequal step_number 1 %}active{%endifequal%}">
+                            <div class='text'>
+                                Step
+                            </div>
+                            <div class='number'>
+                                2
+                            </div>
+</div>
+<div class="step-label {% ifequal step_number 1 %}active{%endifequal%}">
+Brand Details
+</div>
+                        </div>
+                        <div class='state-part'>
+<div class="step-bullet {% ifequal step_number 2 %}active{%endifequal%}">
+                            <div class='text'>
+                                Step
+                            </div>
+                            <div class='number'>
+                                3
+                            </div>
+</div>
+<div class="step-label {% ifequal step_number 2 %}active{%endifequal%}">
+Miscellaneous
+</div>
+                        </div>
+                        <div class='state-part'>
+<div class="step-bullet {% ifequal step_number 3 %}active{%endifequal%}">
+                            <div class='text'>
+                                Step
+                            </div>
+                            <div class='number'>
+                                    4
+                            </div>
+</div>
+<div class="step-label {% ifequal step_number 3 %}active{%endifequal%}">
+Done!
+</div>
+                        </div>
+                    </div>
+                    {% ifequal step_number 0 %}
+                        {% include "pages/signup-form/form0.html" %}
+                    {% else %}
+                        {% ifequal step_number 1 %}
+                            {% include "pages/signup-form/form1.html" %}
+                        {% else %}
+                            {% include "pages/signup-form/form2.html" %}
+                        {% endifequal %}
+                    {% endifequal %}
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+{% block body-js %}
+<script>
+    $(function() {                $(".scrollable").scrollable();                $('.form-page ul li a.continue').click(function() {                    var api = $('.scrollable').data('scrollable');                    var p = $(this).closest('.form-page');                    api.next(400);                    if (p) {                         p.fadeTo(300, 0);                    }
+        });
+    });
+</script>
+{% endblock %}

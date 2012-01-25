@@ -1,0 +1,46 @@
+- extends "pages/base.html"
+- block title
+    around! I would like to see a merchant
+- block extra-css
+    %link{ 'href': '{{STATIC_URL}}css/around-contact.css', 'rel':'stylesheet' }/
+- block main-content
+    #generic-content
+        - if messages
+            .container_12
+                %ul#messages.grid_12
+                    - for message in messages
+                        :plain
+                            <li class="{% if message.tags %} {{message.tags}}{%endif%}">{{message}}</li>
+    
+        .container_12
+            .grid_8.suffix_4
+                %h1
+                    Want to see a merchant on 
+                    %span.emp
+                        around!?
+                %p
+                    It's super important you let us know who you'd like to see on around!. Go ahead, just fill in a short survey below and we'll get to it. 
+                %p
+                    You can also like us on 
+                    :plain
+                        <a target="blank" href="https://www.facebook.com/seewhatsaround/">Facebook</a> or follow us on <a target="blank" href="http://twitter.com/aroundSG">Twitter</a> to find out more about the latest offerings. 
+                .generic-panel
+                    %form#merchant-signup-form{ 'action': '', 'method': 'post' }
+                        -csrf_token
+                        #signup-form
+                            - if form
+                                .form-page
+                                    %ul.form-panel
+                                        - for field in form
+                                            :plain
+                                                <li class="{% if field.errors %}highlight{%endif%}">
+                                                    {{field.label_tag}}
+                                                    {{field}}
+                                                    {{ field.errors}}
+                                                <li>
+                                        %li
+                                            %input{ 'type': 'submit', 'class': 'button', 'value': 'Submit' }
+
+
+                    
+

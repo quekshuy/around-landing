@@ -1,0 +1,82 @@
+- extends "pages/base.html"
+- block title
+    around! About Us
+- block extra-css
+    %link{'href': '/static/css/around-how.css', 'rel': 'stylesheet' }/
+- block main-content
+    #generic-content
+        .container_12
+            .grid_12
+                %h1
+                    The Team
+        .container_12
+            .generic-panel.grid_12
+                %p
+                    The team at 
+                    %span.emp
+                        around! 
+                    is comprised of 7 wacky individuals, who are obsessed with giving you the best experience possible.
+                .team
+                    .team-panel.grid_2.alpha
+                        %img{ 'src': '/static/imgs/about/daxiang_team.jpg' }
+                        %h6
+                            Daxiang, Apprentice
+                        %p
+                            Loves God, loves to travel & loves Krispy Kreme.
+                    .team-panel.grid_2
+                        %img{ 'src': '/static/imgs/about/shuyang_team.jpg' }
+                        %h6
+                            Shu Yang,
+                            %br/ 
+                            Dr. Eat-&-Make-Merry
+                        %p
+                            Takes his coffee black and his sleep light.
+                    .team-panel.grid_2
+                        %img{ 'src': '/static/imgs/about/liling_team.jpg' }
+                        %h6
+                            Li Ling, Business Development Assassin
+                        %p
+                            She shops and supplies.
+                    .team-panel.grid_2
+                        %img{ 'src': '/static/imgs/about/taimin_team.jpg' }
+                        %h6
+                            Tai Min, 
+                            %br/
+                            Mobile Engineer cum Under-appreciated K-Pop Consultant
+                        %p
+                            Man proposes, God disposes but anyone who's determined and perseveres, will get something of value in return, even if it's not what they expected :)
+                    .team-panel.grid_2.omega
+                        %img{ 'src': '/static/imgs/about/esmond_team.jpg' }
+                        %h6
+                            Esmond,
+                            %br/ 
+                            Design Master of the Mobile Order of Slick
+                        %p
+                            Imagination sets the pace, Reality has to play catch up.
+
+        .container_12
+            .grid_5.suffix_1
+                %h1.multi
+                    Media
+                .generic-panel
+                    %p
+                        Check out stories about us.
+                    %ul
+                        %li
+                            %a{'href': 'http://it.zaobao.com.sg/pages10/itech111019.shtml'}
+                                Lianhe Zaobao, October 2011 - 解读迷宫密码 QR Code
+                        %li
+                            %a{ 'href': 'http://sg.news.yahoo.com/blogs/tech-talk/three-singapore-start-ups-mark-zuckerbergs-making-043638435.html'}
+                                Yahoo! News Tech Talk, September 2011
+                        %li
+                            %a{ 'href': 'http://www.youngupstarts.com/2011/08/22/around-adds-joy-to-location-based-loyalty-marketing-with-qr-codes/' }
+                                Young Upstarts Blog, August 2011
+            .grid_6
+                %h1.multi
+                    Backers
+                .generic-panel
+                    %p
+                        We're backed by the below esteemed organisations. Bring It!
+                    %div
+                        %img{ 'src': '/static/imgs/about/NEClogo.png' }
+                        %img{ 'src': '/static/imgs/about/mda-logo.png' }

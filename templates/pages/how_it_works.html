@@ -1,0 +1,123 @@
+{% extends "pages/base.html" %}
+{% block title %}
+    around! How Does It All Work?
+{% endblock %}
+{% block extra-css %}
+    <link href='/static/css/around-how.css' rel='stylesheet' />
+{% endblock %}
+{% block main-content %}
+    <div id='generic-content'>
+        <div class='container_12'>
+            <div class='grid_7'>
+                <h1>
+                    What do I do with
+                    <span class='emp'>
+                        around!
+                    </span>
+                    ?
+                </h1>
+            </div>
+            <div class='grid_5'>
+                <div class='download-panel'>
+                    <h4>
+                        Download FREE
+                    </h4>
+                    <a href='http://itunes.apple.com/sg/app/around!/id443951029?ls=1&mt=8'>
+                        <img id='img-app-store' src='/static/imgs/ios-app-store.gif' />
+                    </a>
+<!-- 
+                        <img src='/static/imgs/android.png' />
+-->
+                </div>
+            </div>
+        </div>
+        <div class='container_12'>
+            <div class='generic-panel grid_12'>
+                <div class='grid_6 alpha'>
+                    <p>
+                        <span class='emp'>
+                            around!
+                        </span>
+                        is an application on the iPhone that allows users to collect loyalty stamps on loyalty cards from merchants. You just have to scan a QR code on the merchant's premises and earn rewards for patronising, stamp by stamp. Never have to stuff loyalty cards in your wallet ever again.
+                    </p>
+                    <p>
+                        <strong>
+                            Sssh.
+                        </strong>
+                        Some merchants even offer discounts and promotions that can be enjoyed only if you use
+                        <span class='emp'>
+                            around!
+                        </span>
+                        to redeem them.
+                        <br />
+                        So download the app now - it's
+                        <strong>
+                            FREE.
+                        </strong>
+                    </p>
+                </div>
+                <div class='grid_6 omega'>
+                    <div id='merchant-signup-panel'>
+                        <h3>
+                            Reasons why you should partner around! as a merchant.
+                        </h3>
+                        <ul>
+                            <li>
+                                Easy, paperless loyalty programs
+                            </li>
+                            <li>
+                                Exposure to a growing base of consumers
+                            </li>
+                            <li>
+                                Up-to-date reports on your customer base
+                            </li>
+                        </ul>
+                        <div class='signup-link group'>
+<a href="{% url page-contact-us %}">Sign Up Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class='grid_12'>
+                    <ul class='frames group'>
+                        <li class='frame grid_3 alpha'>
+                            <div id='frame0'>
+                                <div class='caption'>
+                                    <h4>
+                                        Looking for rewards?
+                                    </h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li class='frame grid_3'>
+                            <div id='frame1'>
+                                <div class='caption'>
+                                    <h4>
+                                        Find privileges from your favourite merchant near you
+                                    </h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li class='frame grid_3'>
+                            <div id='frame2'>
+                                <div class='caption'>
+                                    <h4>
+                                        Tap to Redeem and Scan a QR code at the merchant
+                                    </h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li class='frame grid_3 omega'>
+                            <div id='frame3'>
+                                <div class='caption'>
+                                    <h4>
+                                        Start collecting those stamps
+                                    </h4>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

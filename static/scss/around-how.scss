@@ -1,0 +1,136 @@
+@import "around.scss";
+
+span.emp { 
+    color: $header-bgcolor;
+}
+
+#generic-content { 
+    h1, h2, h3, h4, h5, h6 { 
+        color: $headings-color;
+        display: block;
+        margin-left: 13px;
+        padding-bottom: 9px; 
+        margin-bottom: 0;
+        &.multi { 
+            margin-top: 24px;
+        }
+    }
+
+    .download-panel { 
+        h4 { 
+            display: block;
+            float: left;
+            margin-right: 25px;
+            padding: 0;
+            margin-bottom: 0;
+        }
+
+        img { 
+            float: left;
+            width: 30px;
+            margin: 0px 0px 0px 15px;
+        }
+        img#img-app-store { 
+            width: 100px;
+        }
+    }
+}
+
+$frame-width: 162px;
+$frame-height: 430px;
+@mixin frame-with-num  {
+    width: $frame-width;
+    height: $frame-height;
+    padding-top: $frame-height * 0.8;
+}
+
+.generic-panel { 
+    p { 
+        color: gray;
+        display: block;
+        padding: {
+            top: 12px;
+            left: 10px;
+            right: 10px;
+        }
+        span.emp { 
+            font-weight: bold;
+        }
+    }
+
+    ul.frames { 
+        margin-top: 23px;
+        list-style-type: none;
+        li.frame { 
+            float: left;
+            display: block;
+            height: $frame-height;
+
+            #frame0 { 
+                @include frame-with-num;
+                background: url(/static/imgs/flow/0.png) no-repeat;
+            }
+            #frame1 { 
+                @include frame-with-num;
+                background: url(/static/imgs/flow/1.png) no-repeat;
+            }
+            #frame2 { 
+                @include frame-with-num;
+                background: url(/static/imgs/flow/2.png) no-repeat;
+            }
+            #frame3 { 
+                @include frame-with-num;
+                background: url(/static/imgs/flow/3.png) no-repeat;
+            }
+            .caption { 
+                color: $headings-color;
+                font-weight: bolder;
+                width: 100%;
+                text-align: center;
+                
+                h4 { 
+                    line-height: 0.9em;
+                }
+            }
+        }
+    }
+}
+
+#merchant-signup-panel { 
+
+    @include signup-panel-base;
+    width: 76%;
+    margin: 0 auto;
+    height: auto;
+    padding: { 
+        top: 16px;
+        left: 23px;
+        right: 23px;
+    }
+    h3 { 
+        color: white;
+        margin-left: 6px;
+        line-height: 18px;
+    }
+    ul { 
+        margin-top: 14px;
+        padding: 0;
+    }
+
+    .signup-link { 
+        font-family: $theme-font-family;
+        a { 
+            display: block;
+            float: right;
+            font-weight: bolder;
+            font-size: 24px;
+            text-decoration: underline;
+            &:link, &:visited { 
+                color: white;
+            }
+            &:hover { 
+                color: $nav-hover-color;
+            }
+        }
+    }
+}

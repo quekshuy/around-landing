@@ -1,0 +1,34 @@
+<div class='form-page'>
+    <ul class='form-panel'>
+        <li>
+            <label for='id_brand_image'>
+                {{ form.brand_image.label }}
+                <span class='soft'>
+                    (optional)
+                </span>
+            </label>
+            {{ form.brand_image }}
+        </li>
+        <li>
+            <label for='id_product_image'>
+                {{ form.product_image.label }}
+                <span class='soft'>
+                    (optional)
+                </span>
+            </label>
+            {{ form.product_image }}
+        </li>
+        <li>
+<a href="{% url merchant-signup-middle step_number=1 %}">&laquo;Back a step</a>
+            <input class='button' type='submit' value='All Done!' />
+        </li>
+    </ul>
+    <div class='more-panel'>
+        <h3>
+            Just a little further...
+        </h3>
+        <p>
+            <div class='to'>the ease and convenience of your own paper-less loyalty card solution. And FREE for the first 3 months too...</div>
+        </p>
+    </div>
+</div>

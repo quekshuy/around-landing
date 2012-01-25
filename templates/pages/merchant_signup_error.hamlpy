@@ -1,0 +1,10 @@
+- extends "pages/base.html"
+- block title
+    around! An error occurred
+- block main-content
+    %h1
+        Oops! An error occurred.
+    %p
+        An error occurred.
+
+

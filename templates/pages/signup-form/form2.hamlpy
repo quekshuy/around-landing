@@ -1,0 +1,27 @@
+
+%div.form-page
+
+    -# --------------- Page 2 ---------------
+
+    %ul.form-panel
+        %li
+            %label{ 'for': 'id_brand_image' }
+                = form.brand_image.label
+                %span.soft
+                    (optional)
+            = form.brand_image
+        %li
+            %label{ 'for': 'id_product_image' }
+                = form.product_image.label
+                %span.soft
+                    (optional)
+            = form.product_image
+        %li
+            :plain
+                <a href="{% url merchant-signup-middle step_number=1 %}">&laquo;Back a step</a>
+            %input{ 'type': 'submit', 'class': 'button', 'value': 'All Done!' }
+    .more-panel
+        %h3
+            Just a little further...
+        %p
+            ...to the ease and convenience of your own paper-less loyalty card solution. And FREE for the first 3 months too...

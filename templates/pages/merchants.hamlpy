@@ -1,0 +1,53 @@
+- extends "pages/base.html"
+- block title
+    around! Our Partnering Merchants
+- block extra-css
+    %link{ 'href': '/static/css/around-merchants.css', 'rel': 'stylesheet' }
+- block main-content
+    #merchant-page
+        .container_12
+            .grid_12
+                %h1
+                    Our Partnering Merchants
+        #merchant-panel.container_12
+            -# --- This is where we will put other stuff ---
+            .grid_12
+                #merchant-grid.grid_7.suffix_1.alpha
+                    %p
+                        Here's a selection of our partnering merchants, just itching to reward you handsomely for coming back to their stores. 
+                        %br/ 
+                    - if merchants
+                        %ul.group
+                         - for m in merchants
+                            %li
+                                :plain
+                                    <a href="{{m.website}}">
+                                        <img src="{{MEDIA_URL}}{{m.card_image}}" alt="{{m.name}}" />
+                                    </a>
+                    %p
+                        Not enough? 
+                        :plain
+                            <a href="{% url page-merchant-request %}">Tell</a>
+                        us who you would like to see on 
+                        %strong
+                            around!
+
+                #merchant-signup-call.grid_4.omega
+                    #merchant-signup-panel
+                        %h3
+                            :plain
+                                <a href="{% url merchant-signup-0 %}">
+                            Sign Up As a Partner Merchant Now!
+                            :plain
+                                </a>
+                        %p
+                            Easy, paperless loyalty programs.
+                            %br/
+                            Exposure to a growing base of consumers.
+                            %br/
+                            Up-to-date reports on your customer base.
+
+
+                    
+
+

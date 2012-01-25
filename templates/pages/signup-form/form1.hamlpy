@@ -1,0 +1,32 @@
+
+%div.form-page
+
+    -# --------------- Page 2 ---------------
+
+    %ul.form-panel
+        %li
+            %label{ 'for': 'id_brand_name' }
+                = form.brand_name.label
+                %span.soft
+                    (required)
+            = form.brand_name
+
+        %li
+            %label{ 'for': 'id_outlet_address' }
+                = form.outlet_address.label
+            = form.outlet_address
+        %li
+            :plain
+                <a href="/merchant/signup/">Back</a>
+            %input{ 'type': 'submit', 'class': 'button' , 'value': 'Continue'}
+    .more-panel
+        %h4
+            How will this be used?
+        %p
+            The 
+            %strong
+                around!
+            team can better advise you if we understand your business or a sample loyalty program.
+        
+                    
+

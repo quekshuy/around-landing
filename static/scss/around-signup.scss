@@ -5,10 +5,14 @@ $signup-form-height: 460px;
 $signup-form-width: 900px;
 $form-panel-width: 490px;
 
+$state-bar-active-color: rgb(254, 114, 0);
+$state-bar-color: rgb(252,215,215);
+
 .heading { 
     display: block;
     color: rgb(96, 46, 19);
-    float: right;
+    float: left;
+    font-size: 36px;
 }
 #signup-page { 
 
@@ -27,33 +31,71 @@ $form-panel-width: 490px;
         -moz-border-radius: 8px;
         border-radius: 8px;
 
-        .controls-panel { 
-            position: relative;
-            z-index: 3;
-            top: -28px;
-            left: 13px;
+        ul#messages { 
+
+            width: 80%;
+            margin: 12px auto;
+            list-style-type: none;
+            border: 1px solid rgb(163, 98, 10);
+            background-color: rgb(255, 247, 220);
+            padding: 14px 19px;
         }
 
-        .scrollable { 
-            position: relative;
-            overflow: hidden;
-            width: $signup-form-width;
-            /*min-height: $signup-form-height;*/
-            height: $signup-form-height;
 
-            .items { 
-                width: 20000em;
-                position: absolute;
+        #signup-state-bar { 
 
-                div { 
-                    float: left;
-
-                    .form-page { 
-                        width: $signup-form-width;
-                    }
-                }
+            display: block;
+            clear: both;
+            margin: { 
+                top: 23px;
+                left: 29px;
             }
-        }
+             & > div { 
+                float: left;
+            }
+            .state-part {
+                float: left;
+                .step-bullet { 
+                    float: left;
+                    height: 45px;
+                    width: 45px;
+                    text-align:center;
+                    background: url(/static/imgs/light-orange-circle.png) no-repeat;
+                    &.active { 
+                        background: url(/static/imgs/dark-orange-circle.png) no-repeat;
+                    }
+                    .text { 
+                        color: white;
+                        font-size: 13px;
+                        padding: 0;
+                        margin: { 
+                            top: 3px;
+                        }
+                        font-weight: bold;
+                    }
+                    .number {
+                        color: white;
+                        font-size: 19px;
+                        font-weight: bolder;
+                        padding: 0;
+                        margin: {
+                            top: -7px;
+                        }
+                    }
+                } /* end .step-bullet */
+                .step-label { 
+                    float: left;
+                    color: $state-bar-color;
+                    padding: 10px 13px;
+                    margin-right: 12px;
+                    font-weight: bolder;
+                    font-size: 18px;
+                    &.active { 
+                        color: $state-bar-active-color;
+                    }
+                } /* end .step-label */
+            } /* end .state-part */
+        } /* end #signup-state-bar */
 
         label { 
             font-size: 17px;
@@ -78,6 +120,9 @@ $form-panel-width: 490px;
             margin-top: 45px;
             float: left;
             width: $form-panel-width;
+            input[type=submit] { 
+                margin-top: 23px;
+            }
             .action { 
                 margin-top: 74px;
                 a {
@@ -85,13 +130,9 @@ $form-panel-width: 490px;
                     width: 83px;
                     text-align: center;
                     font-size: 17px;
-                    /*padding: { */
-                        /*left: 20px;*/
-                        /*right: 20px;*/
-                    /*}*/
                 }
             }
-        }
+        } /* end .form-panel */
 
         .more-panel { 
             margin-top: 45px;

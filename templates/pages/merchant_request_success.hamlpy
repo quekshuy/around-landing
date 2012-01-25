@@ -1,0 +1,16 @@
+- extends "pages/base.html"
+- block title
+    around! Success!
+- block main-content
+    #generic-content
+        .container_12
+            .generic-panel.grid_12
+                %h1
+                    Thanks for contacting us! 
+                %p
+                    You've spoken and we've heard you. Do you hear that? That pattering of feet is us scrambling to bring your requested merchant onboard with us.
+                    :plain
+                        Meanwhile, click <a href="/">here</a> to go back to the landing page.
+
+
+
