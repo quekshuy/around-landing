@@ -1,4 +1,9 @@
 - extends "pages/base.html"
+- block extra-js
+    %script
+        if (screen.width <= 699) { 
+            document.location = '/mobile/';
+        }
 - block main-content
     #start-content
         / has the background tiling
@@ -48,12 +53,12 @@
 
                 
 - block body-js
-    %script
-        $(function() { 
-            $(".scrollable").scrollable({circular: true}).navigator().autoscroll({
-                interval: 5000,
-                autopause: false,
+        %script
+            $(function() { 
+                $(".scrollable").scrollable({circular: true}).navigator().autoscroll({
+                    interval: 15000,
+                    autopause: false,
+                });
             });
-        });
         
 

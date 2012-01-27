@@ -34,6 +34,15 @@ except ImportError:
     sys.stderr.write("\nFor debugging purposes, the exception was:\n\n")
     traceback.print_exc()
 
+#  -----  Specific to ep.io -------
+
+TEMPLATE_DIRS = (
+            os.sep.join([PROJECT_ROOT, 'templates'])
+        )
+
+
+# ----- End ep.io -------
+
 # remove disabled apps
 
 if 'DISABLED_APPS' in locals():

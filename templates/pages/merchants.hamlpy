@@ -36,7 +36,7 @@
                     #merchant-signup-panel
                         %h3
                             :plain
-                                <a href="{% url merchant-signup-0 %}">
+                                <a href="{% url page-contact-us %}">
                             Sign Up As a Partner Merchant Now!
                             :plain
                                 </a>

@@ -1,0 +1,73 @@
+$theme-font-family: 'Rockwell', 'Rokkitt', serif;
+$body-font-family: 'Helvetica', 'Arial', sans-serif;
+$page-bgcolor: rgb(234, 226, 215);
+
+#mobile-container { 
+    padding: 0;
+    margin: 0;
+
+    font-family: $body-font-family;
+
+    #header { 
+        position: relative;
+        z-index: 1;
+        background: url(/static/imgs/mobile/wood-tile-background.jpg);
+        width: 100%;
+        text-align: center;
+        /* shadow */
+        -webkit-box-shadow: 0px 3px 9px 2px rgba(191, 191, 191, 1);
+        -moz-box-shadow: 0px 3px 9px 2px rgba(191, 191, 191, 1);
+        box-shadow: 0px 3px 9px 2px rgba(191, 191, 191, 1);  
+
+        img { 
+                width: 90%;
+                margin: 0 auto;
+            }
+    }
+
+    #content { 
+        position: relative;
+        background: $page-bgcolor;
+        padding: 24px 12px;
+        color: rgb(96, 46, 19);
+
+        .content-panel { 
+            background-color: white;
+            padding: 32px 32px;
+            /* rounded corners */
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            border-radius: 8px;
+        }
+        
+        span.emp { 
+            color: rgb(191,27,32);
+        }
+
+        .buttons { 
+            width:100%;
+            text-align: center; 
+            padding: { 
+                top:12px;
+            }
+
+            img { 
+                width: 66%;
+                margin: 0 auto;
+                clear: both;
+
+                &#android { 
+                    width: auto;
+                    margin-top: 12px;
+                }
+            }
+
+            h4 { 
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin-top: 12px;
+            }
+        }
+    }
+}

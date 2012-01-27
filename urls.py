@@ -44,6 +44,9 @@ urlpatterns = patterns('',
     # For lead generation
     (r'^merchant/signup/', include('leads.urls')),
 
+    # For mobile
+    url(r'^mobile/$', include('mobile.urls')),
+
     # For lead generation
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 
     # to INSTALLED_APPS to enable admin documentation:

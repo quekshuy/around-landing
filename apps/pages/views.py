@@ -104,8 +104,9 @@ class ContactUsPage(TemplateResponseMixin, View):
 
     def get(self, request):
         form = ArdLeadForm()
+        context = dict(form=form, page_contact=1)
         return render(request, self.template_name, 
-                { 'form': form })
+                context)
 
 #-------------------------------------------------------------------------------- 
 
@@ -122,7 +123,8 @@ class MerchantsPage(TemplateResponseMixin, View):
         max_num = merchants.count()
         if self.merchant_num < max_num:
             max_num = self.merchant_num
-        context = dict(merchants=[merchants[i] for i in xrange(max_num)])
+        context = dict(merchants=[merchants[i] for i in xrange(max_num)],
+                page_merchants=1)
         return render(request, self.template_name, context)
 
 #-------------------------------------------------------------------------------- 

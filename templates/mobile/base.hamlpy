@@ -1,0 +1,23 @@
+:plain
+    <!DOCTYPE html> 
+    <html> 
+        <head> 
+        <title>{% block title %}around! on Mobile {% endblock %}</title> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link href="{{STATIC_URL}}css/960/reset.css" rel="stylesheet" />
+        <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700' rel='stylesheet' type='text/css'> 
+        {% block extra-css %}
+        {% endblock %}
+        <!-- 
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script> 
+        -->
+        {% block extra-js %}
+        {% endblock %}
+    </head> 
+
+    <body> 
+        {% block content %}
+        {% endblock %} 
+    </body>
+    </html>
+

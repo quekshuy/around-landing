@@ -42,9 +42,9 @@
                         %h6
                             Tai Min, 
                             %br/
-                            Mobile Engineer cum Under-appreciated K-Pop Consultant
+                            Mobile Engineer cum King of K-Pop
                         %p
-                            Man proposes, God disposes but anyone who's determined and perseveres, will get something of value in return, even if it's not what they expected :)
+                            Man proposes, God disposes. 
                     .team-panel.grid_2.omega
                         %img{ 'src': '/static/imgs/about/esmond_team.jpg' }
                         %h6
@@ -80,3 +80,4 @@
                     %div
                         %img{ 'src': '/static/imgs/about/NEClogo.png' }
                         %img{ 'src': '/static/imgs/about/mda-logo.png' }
+                        %img{ 'src': '/static/imgs/about/incuvest-asia.png'}

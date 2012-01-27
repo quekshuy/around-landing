@@ -1,0 +1,41 @@
+{% extends "mobile/base.html" %}
+{% block extra-css %}
+    <link href='/static/css/around-mobile.css' rel='stylesheet' />
+{% endblock %}
+{% block content %}
+    <div id='mobile-container'>
+        <div id='header'>
+            <img src='/static/imgs/mobile/around_newlogo_web.png' />
+        </div>
+        <div id='content'>
+            <div class='content-panel'>
+                <p>
+                    <span class='emp'>
+                        around!
+                    </span>
+                    is a
+                    <strong>
+                        FREE
+                    </strong>
+                    mobile application that allows you to earn rewards from merchants by collecting loyalty stamps at their outlets. All you have to do is scan QR codes.
+                   <p>
+                        &nbsp;
+                   </p>
+                   <p>
+<a href="http://itunes.apple.com/sg/app/around!/id443951029?ls=1&mt=8">Download</a> it to find out more. Earn rewards today. :)
+                   </p>
+                </p>
+                <div class='buttons'>
+<!-- insert link to iTunes store here. -->
+                    <a href='http://itunes.apple.com/sg/app/around!/id443951029?ls=1&mt=8'>
+                        <img src='/static/imgs/ios-app-store.gif' />
+                    </a>
+                    <h4>
+                        Coming Soon
+                    </h4>
+                    <img id='android' src='/static/imgs/android.png' />
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
