@@ -33,10 +33,6 @@ span.emp {
         img#img-app-store { 
             width: 100px;
         }
-        img#img-android { 
-            margin-top: 3px;
-            width: 100px;
-        }
     }
 }
 
@@ -136,5 +132,11 @@ $frame-height: 430px;
                 color: $nav-hover-color;
             }
         }
+    }
+}
+
+#backer-imgs { 
+    img { 
+        width: 120px;
     }
 }

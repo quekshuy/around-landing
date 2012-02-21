@@ -2,7 +2,7 @@
 - block title
     around! About Us
 - block extra-css
-    %link{'href': '/static/css/around-how.css', 'rel': 'stylesheet' }/
+    %link{'href': '/static/css/around-about.css', 'rel': 'stylesheet' }/
 - block main-content
     #generic-content
         .container_12
@@ -77,7 +77,7 @@
                 .generic-panel
                     %p
                         We're backed by the below esteemed organisations. Bring It!
-                    %div
+                    #backer-imgs
                         %img{ 'src': '/static/imgs/about/NEClogo.png' }
                         %img{ 'src': '/static/imgs/about/mda-logo.png' }
                         %img{ 'src': '/static/imgs/about/incuvest-asia.png'}

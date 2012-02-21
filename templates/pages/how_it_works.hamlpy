@@ -6,20 +6,20 @@
 - block main-content
     #generic-content
         .container_12
-            .grid_7
+            .grid_6
                 %h1
                     What do I do with 
                     %span.emp
                         around!
                     ?
-            .grid_5
+            .grid_6
                 .download-panel
                     %h4
                         Download FREE
                     %a{ 'href': 'http://itunes.apple.com/sg/app/around!/id443951029?ls=1&mt=8' }
                         %img{ 'id': 'img-app-store', 'src': '/static/imgs/ios-app-store.gif' }
-                    / 
-                        %img{ 'src': '/static/imgs/android.png' }
+                        %a{'href': 'http://market.android.com/details?id=around.com.sg', 'target': 'blank'}
+                            %img{ 'id': 'img-android', 'src': '/static/imgs/androidappstore.png' }
         .container_12
             .generic-panel.grid_12
                 .grid_6.alpha

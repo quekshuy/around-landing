@@ -310,108 +310,110 @@ a.button {
     border-radius: 8px;
     padding: 19px 19px; }
 
-.heading {
-  display: block;
-  color: #602e13;
-  float: left;
-  font-size: 36px; }
+span.emp {
+  color: #bf1b20; }
 
-#signup-page {
-  background-color: #eae2d7;
-  padding-top: 56px;
-  padding-bottom: 37px;
-  /* end #signup-form */ }
-  #signup-page #signup-form {
-    background-color: white;
+#generic-content h1, #generic-content h2, #generic-content h3, #generic-content h4, #generic-content h5, #generic-content h6 {
+  color: #602e13;
+  display: block;
+  margin-left: 13px;
+  padding-bottom: 9px;
+  margin-bottom: 0; }
+  #generic-content h1.multi, #generic-content h2.multi, #generic-content h3.multi, #generic-content h4.multi, #generic-content h5.multi, #generic-content h6.multi {
+    margin-top: 24px; }
+#generic-content .download-panel h4 {
+  display: block;
+  float: left;
+  margin-right: 25px;
+  padding: 0;
+  margin-bottom: 0; }
+#generic-content .download-panel img {
+  float: left;
+  width: 30px;
+  margin: 0px 0px 0px 15px; }
+#generic-content .download-panel img#img-app-store {
+  width: 100px; }
+
+.generic-panel p {
+  color: gray;
+  display: block;
+  padding-top: 12px;
+  padding-left: 10px;
+  padding-right: 10px; }
+  .generic-panel p span.emp {
+    font-weight: bold; }
+.generic-panel ul.frames {
+  margin-top: 23px;
+  list-style-type: none; }
+  .generic-panel ul.frames li.frame {
+    float: left;
     display: block;
-    /* rounded corners */
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
-    /* end #signup-state-bar */
-    /* end .form-panel */ }
-    #signup-page #signup-form ul#messages {
-      width: 80%;
-      margin: 12px auto;
-      list-style-type: none;
-      border: 1px solid #a3620a;
-      background-color: #fff7dc;
-      padding: 14px 19px; }
-    #signup-page #signup-form #signup-state-bar {
+    height: 430px; }
+    .generic-panel ul.frames li.frame #frame0 {
+      width: 162px;
+      height: 430px;
+      padding-top: 344px;
+      background: url(/static/imgs/flow/0.png) no-repeat; }
+    .generic-panel ul.frames li.frame #frame1 {
+      width: 162px;
+      height: 430px;
+      padding-top: 344px;
+      background: url(/static/imgs/flow/1.png) no-repeat; }
+    .generic-panel ul.frames li.frame #frame2 {
+      width: 162px;
+      height: 430px;
+      padding-top: 344px;
+      background: url(/static/imgs/flow/2.png) no-repeat; }
+    .generic-panel ul.frames li.frame #frame3 {
+      width: 162px;
+      height: 430px;
+      padding-top: 344px;
+      background: url(/static/imgs/flow/3.png) no-repeat; }
+    .generic-panel ul.frames li.frame .caption {
+      color: #602e13;
+      font-weight: bolder;
+      width: 100%;
+      text-align: center; }
+      .generic-panel ul.frames li.frame .caption h4 {
+        line-height: 0.9em; }
+
+#merchant-signup-panel {
+  background: #bf1b20;
+  /* Old browsers */
+  /* round corners */
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  padding: 10px 10px;
+  color: white;
+  width: 76%;
+  margin: 0 auto;
+  height: auto;
+  padding-top: 16px;
+  padding-left: 23px;
+  padding-right: 23px; }
+  #merchant-signup-panel h3 {
+    padding: 0;
+    margin-bottom: 4px; }
+  #merchant-signup-panel h3 {
+    color: white;
+    margin-left: 6px;
+    line-height: 18px; }
+  #merchant-signup-panel ul {
+    margin-top: 14px;
+    padding: 0; }
+  #merchant-signup-panel .signup-link {
+    font-family: "Rockwell", "Rokkitt", serif; }
+    #merchant-signup-panel .signup-link a {
       display: block;
-      clear: both;
-      margin-top: 23px;
-      margin-left: 29px;
-      /* end .state-part */ }
-      #signup-page #signup-form #signup-state-bar > div {
-        float: left; }
-      #signup-page #signup-form #signup-state-bar .state-part {
-        float: left;
-        /* end .step-bullet */
-        /* end .step-label */ }
-        #signup-page #signup-form #signup-state-bar .state-part .step-bullet {
-          float: left;
-          height: 45px;
-          width: 45px;
-          text-align: center;
-          background: url(/static/imgs/light-orange-circle.png) no-repeat; }
-          #signup-page #signup-form #signup-state-bar .state-part .step-bullet.active {
-            background: url(/static/imgs/dark-orange-circle.png) no-repeat; }
-          #signup-page #signup-form #signup-state-bar .state-part .step-bullet .text {
-            color: white;
-            font-size: 13px;
-            padding: 0;
-            margin-top: 3px;
-            font-weight: bold; }
-          #signup-page #signup-form #signup-state-bar .state-part .step-bullet .number {
-            color: white;
-            font-size: 19px;
-            font-weight: bolder;
-            padding: 0;
-            margin-top: -7px; }
-        #signup-page #signup-form #signup-state-bar .state-part .step-label {
-          float: left;
-          color: #fcd7d7;
-          padding: 10px 13px;
-          margin-right: 12px;
-          font-weight: bolder;
-          font-size: 18px; }
-          #signup-page #signup-form #signup-state-bar .state-part .step-label.active {
-            color: #fe7200; }
-    #signup-page #signup-form label {
-      font-size: 17px;
-      font-weight: bold;
-      width: auto;
-      padding-left: 7px;
-      padding-bottom: 6px; }
-      #signup-page #signup-form label span.soft {
-        color: #bfbfbf; }
-    #signup-page #signup-form ul {
-      list-style-type: none; }
-      #signup-page #signup-form ul li {
-        padding-bottom: 6px; }
-    #signup-page #signup-form .form-panel {
-      margin-top: 45px;
-      float: left;
-      width: 490px; }
-      #signup-page #signup-form .form-panel input[type=submit] {
-        margin-top: 23px; }
-      #signup-page #signup-form .form-panel .action {
-        margin-top: 74px; }
-        #signup-page #signup-form .form-panel .action a {
-          float: right;
-          width: 83px;
-          text-align: center;
-          font-size: 17px; }
-    #signup-page #signup-form .more-panel {
-      margin-top: 45px;
-      margin-right: 23px;
-      float: left;
-      background-color: #ebebeb;
-      width: 308px;
-      margin-left: 34px;
-      /* rounded corners */
-      -webkit-border-radius: 8px;
-      -moz-border-radius: 8px;
-      border-radius: 8px;
-      padding: 12px 12px; }
+      float: right;
+      font-weight: bolder;
+      font-size: 24px;
+      text-decoration: underline; }
+      #merchant-signup-panel .signup-link a:link, #merchant-signup-panel .signup-link a:visited {
+        color: white; }
+      #merchant-signup-panel .signup-link a:hover {
+        color: #fe7200; }
+
+#backer-imgs img {
+  width: 120px; }

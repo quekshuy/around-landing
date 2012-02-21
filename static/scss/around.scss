@@ -324,9 +324,12 @@ $add-details-height: $start-content-height - $main-panel-height;
                 margin-top: -12px;
                 img#img-app-store { 
                     width: 123px;
-                    margin-left: 12px;
                     margin-bottom: 15px;
-                    display: block;
+                }
+                img#img-android { 
+                    width: 123px;
+                    margin-bottom: 15px;
+                    margin-left: 5px;
                 }
                 
                 div { 

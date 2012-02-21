@@ -243,9 +243,11 @@ a.button {
         margin-top: -12px; }
         #start-content #add-details .add-details-panel .download-panel img#img-app-store {
           width: 123px;
-          margin-left: 12px;
+          margin-bottom: 15px; }
+        #start-content #add-details .add-details-panel .download-panel img#img-android {
+          width: 123px;
           margin-bottom: 15px;
-          display: block; }
+          margin-left: 5px; }
         #start-content #add-details .add-details-panel .download-panel div {
           color: #565656;
           float: left;
@@ -330,6 +332,9 @@ span.emp {
   width: 30px;
   margin: 0px 0px 0px 15px; }
 #generic-content .download-panel img#img-app-store {
+  width: 100px; }
+#generic-content .download-panel img#img-android {
+  margin-top: 3px;
   width: 100px; }
 
 .generic-panel p {
